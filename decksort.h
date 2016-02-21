@@ -7,9 +7,8 @@
 
 
 
-void merge_sort(); 
 
-void merge_sort(std::vector<Card*>&  cards);
+void merge_sort(std::vector<Card*>&  cards, int comparator);
 
 
 //void merge_sort(vector<Card*> cards, void (*f)() );

@@ -17,19 +17,17 @@ class SimpleCard : public Card{
   public: 
     SimpleCard(); 
     SimpleCard(int val); 
+    
+    void set_value(int n);  
+    
     string get_value(); 
     string to_string();  
     bool has_suit();
-    void set_value(int n);  
     int get_value_int();
-
-
-//    bool less_than(SimpleCard* y);
-     
-//    bool operator<(SimpleCard y);
-//    bool operator<(SimpleCard* y);  
-//    bool operator>(SimpleCard y);
-//    bool operator>(SimpleCard* y); 
+    int get_suit_int(); // needed since I stuck with pure abstract class
+                        // I need to use template !!!!  
 }; 
 
 #endif
+
+

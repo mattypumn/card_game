@@ -42,6 +42,12 @@ int SimpleCard::get_value_int(){
   return value;
 }
 
+
+int SimpleCard::get_suit_int(){
+  return 0;
+}
+
+
 //bool SimpleCard::less_than(){
 //  return 0; 
 //}

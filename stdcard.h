@@ -18,27 +18,14 @@ class StdCard : public Card{
     StdCard();
     StdCard(int val, int suit); 
 
-
     void set_suit(int suit); 
-    void set_suit(char suit); 
     void set_value(int val); 
-    void set_value(string value); 
     
     bool has_suit(); 
     string get_value(); 
     string to_string(); 
     int get_value_int(); 
     int get_suit_int(); 
-
-    bool less_than(StdCard* y); 
-
-//    bool suit_less_than(StdCard y); 
-//    bool suit_less_than(StdCard* y);
-
-//    bool operator<(StdCard y);
-//    bool operator<(StdCard* yp); 
-//   bool operator>(StdCard y);
-//    bool operator>(StdCard* yp); 
 
 };
 

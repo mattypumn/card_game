@@ -13,6 +13,8 @@ class Card{
     virtual string get_value() = 0; 
     virtual string to_string() = 0;
     virtual int get_value_int() = 0;  
+    virtual int get_suit_int() = 0; 
+
 }; 
 
 

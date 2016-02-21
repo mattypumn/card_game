@@ -160,7 +160,7 @@ void play_game(Deck deck){
 	/****  Case 5:  Pring users hand ***/ 
 	case 5: 
           cout << "Your hand:" << endl; 
-          //hand.sort();
+          hand.sort();
 	  hand.print_cards_in_deck(); 
 	  break; 
 

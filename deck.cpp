@@ -11,9 +11,11 @@
 
 
 
-/*** constructor  ******/
+/********************* constructor  *************************/
+
+
 Deck::Deck(){
-   /**************   UPDATE  ***************/ 
+  
 }
 
 Deck::Deck(int type){  // type should be either one or two ! 
@@ -59,6 +61,10 @@ void Deck::swap(int i, int j){
   cards[j] = temp; 
 }
 
+/* shuffle the cards remaining in deck
+ * 
+ */ 
+
 void Deck::shuffle(){
   int deck_count = cards.size(); 
   int i, j; 
@@ -68,20 +74,22 @@ void Deck::shuffle(){
   }  
 }
 
-
+/* Sort the cards remaining in deck
+ * 
+ */ 
 void Deck::sort(){
   if(cards.size() == 0 ){
     return; 
   }
   
-  // sort first by suit  
+  merge_sort(cards, 0); 
+  
+
   if(  cards[0]->has_suit() ){  
      cout << "Deck Has suits !" << endl; 
- 
+     merge_sort(cards, 1);  
   } 
-  merge_sort(cards); 
 
-  merge_sort(); 
 }
 
 
@@ -95,9 +103,7 @@ void Deck::sort(){
   useful to take a card from deck and put in hand 
 */   
 Card* Deck::take_card(int index){
-
   Card* r_card = cards[index];
-
   cards.erase( cards.begin()+index );
 
   return r_card;   
@@ -112,10 +118,17 @@ void Deck::see_top_card(){
   cout << cards.back()->to_string();   
 }
 
+
+/*  return the number of cards still in deck
+ * 
+ */ 
 int Deck::get_card_count(){
   return cards.size(); 
 }
 
+/*  send values of cards 
+ *  bottom to top separated by \n
+ */ 
 void Deck::print_cards_in_deck(){
   
   if(cards.size() == 0){
