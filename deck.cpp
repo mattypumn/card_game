@@ -81,7 +81,7 @@ void Deck::sort(){
   if(cards.size() == 0 ){
     return; 
   }
-  
+  cout << "Sorting... " << endl;   
   merge_sort(cards, 0); 
   
 

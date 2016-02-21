@@ -70,7 +70,6 @@ void merge_sort(vector<Card*>& cards, vector<Card*>& v2, int start, int end, int
 
 //  help prepare for the actual merge_sort recursive calls
 void merge_sort(std::vector<Card*>& cards, int comparator){ 
-   cout << "Sorting ... " << endl; 
   if(cards.size() == 0)  return; 
 
   vector<Card*> v2(cards);
